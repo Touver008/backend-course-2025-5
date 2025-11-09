@@ -1,12 +1,17 @@
 {
   "name": "backend-course-2025-5",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js -h 127.0.0.1 -p 3000 -c ./cache",
+    "dev": "nodemon --watch . --exec \"node index.js -h 127.0.0.1 -p 3000 -c ./cache\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "commander": "^11.0.0",
+    "superagent": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
 }
+
